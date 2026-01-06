@@ -1,0 +1,50 @@
+/* https://foodily.vercel.app/
+https://validthemes.net/site-template/fatory/index-4.html
+
+https://demo.ovathemewp.com/tripgo_html/index.html */
+
+nav{
+    position: fixed!important;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    
+}
+nav .nav-link {
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  color: white !important;
+}
+nav .nav-link::before {
+  border-bottom: 2px solid #ff4a52;
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+     transition: 0.3s ease-in-out;
+    width: 0%;
+}
+nav .nav-link:hover::before {
+  width: 100%;
+}
+.dynamicCaroe
+{
+     width:100%;
+        height:80vh;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;  
+        animation: zoomer 10s 1 alternate;
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),var(--image-url);
+}
+@keyframes zoomer {
+    to{
+        transform: scale(1.1);
+    }
+}
+#main h1 
+{
+    padding: 200px 0;
+    color: white;
+}
