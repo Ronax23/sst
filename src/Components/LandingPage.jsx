@@ -1,6 +1,10 @@
 import React from 'react'
+import BrandSection from '../assets/Reusable/BrandSection'
+import ContactUs from './ContactUs'
 
 export default function LandingPage() {
+
+
 const dynamics=[
     {
         content:"Welcome to SSTC",
@@ -16,18 +20,19 @@ const dynamics=[
     }
 ]
 
+
   return (
     <>
-    <header id='main'>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <header id='main '>
+        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     {dynamics.map((item, index)=>(
-        <div class={`carousel-item ${index===0 ? "active":""}`} key={index}>
+        <div class={`carousel-item${index===0 ? "active":""}`} key={index}>
         <div className='dynamicCaroe d-block' 
     style={{ '--image-url': `url(${item.imgsrc})` }}>
             <div className='container'>
                 <div className='row mb-5'>
-                    <div className='col-lg-6 my-5'>
+                    <div className='col-lg-6 my-5 '>
                         <h1>{item.content}</h1>
                     </div>
                 </div>
@@ -39,7 +44,9 @@ const dynamics=[
   
   </div>
     </header>
+   <BrandSection/>
     
+    <section id="sec3"></section>
     </>
   )
 }

@@ -4,7 +4,7 @@ export const Footer_route=[
         title: "Quick Links",
         links: [
             {
-                links: "home",
+                links: "/",
                 Name: "Home"
             },
                {

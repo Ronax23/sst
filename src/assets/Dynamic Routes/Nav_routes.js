@@ -1,6 +1,6 @@
 export const Nav_Route=[
     {
-        links: "home",
+        links: "/",
         Name: "Home"
     },
     {
