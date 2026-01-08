@@ -1,6 +1,7 @@
 import React from 'react'
 import BrandSection from '../assets/Reusable/BrandSection'
 import ContactUs from './ContactUs'
+import ServiceTabs from '../assets/Reusable/ServiceTabs'
 
 export default function LandingPage() {
 
@@ -47,6 +48,10 @@ const dynamics=[
    <BrandSection/>
     
     <section id="sec3"></section>
+    <ServiceTabs/>
+
+    
+
     </>
   )
 }
