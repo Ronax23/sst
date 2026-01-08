@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderReusable from '../assets/Reusable/HeaderReusable';
 
 function ContactUs() {
-  const callig="./public/Headers/Contact.jpg";
+  const callig="./Headers/Contact.jpg";
 
   return (
    <>   

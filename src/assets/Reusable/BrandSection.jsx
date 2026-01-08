@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"; // Added useState import
+import { useEffect, useState } from "react";
 
 export default function () {
   const comp_logo = [
@@ -23,31 +23,31 @@ export default function () {
       alt: "Flovel Logo"
     },
     {
-      imgsrc: "./public/Logos/isgec.png",
+      imgsrc: "./Logos/isgec.png",
       alt: "Isgec Logo"
     },
     {
-      imgsrc: "./public/Logos/HPP.png",
+      imgsrc: "./Logos/HPP.png",
       alt: "Hpp Logo"
     },
     {
-      imgsrc: "./public/Logos/pentaflo.png",
+      imgsrc: "./Logos/pentaflo.png",
       alt: "Pentaflo Logo"
     },
     {
-      imgsrc: "./public/Logos/maruti.svg",
+      imgsrc: "./Logos/maruti.svg",
       alt: "Maruti Logo"
     },
     {
-      imgsrc: "./public/Logos/Samco.png",
+      imgsrc: "./Logos/Samco.png",
       alt: "Samco Logo"
     },
     {
-      imgsrc: "./public/Logos/voith.svg",
+      imgsrc: "./Logos/voith.svg",
       alt: "Voith Logo"
     },
     {
-      imgsrc: "./public/Logos/Sietz.png",
+      imgsrc: "./Logos/Sietz.png",
       alt: "Sietz Logo"
     },
   ];

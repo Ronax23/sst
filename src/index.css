@@ -97,7 +97,7 @@ img{
   transition: transform 0.4s ease-in-out;
   transform: translateX(calc(-1 * var(--logo-width)));
 }
-.logo-card {
+.logo-card, .dynamicSizer {
   flex: 0 0 var(--logo-width);
   display: flex;
   justify-content: space-between;
@@ -115,19 +115,23 @@ img{
   filter: grayscale(50%);
 
 }
+
+.dynamicSizer {
+  flex: 0 0 var(--pic-width);
+}
 /* --- Breakpoints --- */
 
 /* Mobile: Show 2 logos (Width = 100% / 2) */
-:root { --logo-width: 50%; }
+:root { --logo-width: 50%; --pic-width:98% }
 
 /* Tablets: Show 4 logos (Width = 100% / 4) */
 @media (min-width: 768px) {
-  :root { --logo-width: 25%; }
+  :root { --logo-width: 25%; --pic-width:48% }
 }
 
 /* Desktop: Show 5 logos (Width = 100% / 5) */
 @media (min-width: 1200px) {
-  :root { --logo-width: 20%; }
+  :root { --logo-width: 20%; --pic-width:31% }
 }
 
 /* In your index.css or App.css */
