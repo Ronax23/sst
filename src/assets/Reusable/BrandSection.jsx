@@ -3,23 +3,23 @@ import { useEffect, useState } from "react";
 export default function () {
   const comp_logo = [
     {
-      imgsrc: "./public/Logos/andritz-logo-icon.png",
+      imgsrc: "./Logos/andritz-logo-icon.png",
       alt: "Andritz Logo"
     },
     {
-      imgsrc: "./public/Logos/avl.png",
+      imgsrc: "./Logos/avl.png",
       alt: "AVL Logo"
     },
     {
-      imgsrc: "./public/Logos/BlissAnand.png",
+      imgsrc: "./Logos/BlissAnand.png",
       alt: "Bliss Anand Logo"
     },
     {
-      imgsrc: "./public/Logos/dantal.svg",
+      imgsrc: "./Logos/dantal.svg",
       alt: "Dantal Logo"
     },
     {
-      imgsrc: "./public/Logos/Flovel.jpg",
+      imgsrc: "./Logos/Flovel.jpg",
       alt: "Flovel Logo"
     },
     {
