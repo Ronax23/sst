@@ -9,6 +9,8 @@ import ContactUs from './Components/ContactUs.jsx';
 import MainPage from './Components/MainPage.jsx';
 import OurTeam from './Components/OurTeam.jsx';
 import Terms from './Components/Terms.jsx';
+import Workshop from './Components/Workshop.jsx';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,6 +21,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="contact" element={<ContactUs />} />
           <Route path="team" element={<OurTeam />} />
           <Route path="terms-of-service" element={<Terms />} />
+          <Route path="workshop" element={<Workshop />} />
         </Route>
       </Routes>
           

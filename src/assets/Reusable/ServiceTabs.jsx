@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import LazyImage from './LazyImage'
 
 const dynamicSelector={
   HYDRO:{
@@ -65,7 +66,7 @@ function ServiceTabs() {
           className="col-lg-6 img-animate" 
           key={`img-${selected}`} // Forces animation restart
         > 
-          <img 
+          <LazyImage 
             src={dynamicSelector[selected].img} 
             alt="Course" 
             className="img-fluid rounded shadow-lg border" 

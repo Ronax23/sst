@@ -14,9 +14,9 @@ function HeaderReusable(props) {
                 <div className='col-lg-12 text-center '>
                     <h1 className='text-white'>{props.title}</h1>
                     <div aria-label="breadcrumb ">
-  <ol class="breadcrumb text-white justify-content-center">
-    <li class="breadcrumb-item"><Link to="/">Home</Link></li>
-    <li class="breadcrumb-item active text-white" aria-current="page">{(id.pathname.split('/').pop()).toUpperCase()}</li>
+  <ol className="breadcrumb text-white justify-content-center">
+    <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+    <li className="breadcrumb-item active text-white" aria-current="page">{(id.pathname.split('/').pop()).toUpperCase()}</li>
   </ol>
 </div>
                 </div>

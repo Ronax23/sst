@@ -77,7 +77,7 @@ const [logos, setLogos] = useState(comp_logo);
     <section className="brand-section">
       <div className="container">
         <h2 className="text-center mb-5">Our Clients</h2>
-        <div className="slider-window"onMouseEnter={() => setIsPaused(true)}
+        <div className="slider-window" onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}>
           {/* We add 'moving' class to trigger the CSS transform */}
           <div className={`slider-track ${isMoving ? "moving" : ""}`}>

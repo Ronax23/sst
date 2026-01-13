@@ -6,7 +6,14 @@ https://demo.ovathemewp.com/tripgo_html/index.html */
 #contactus{
     
 }
-
+.hover-effect img{
+  transition-duration: .5s;
+  width: 100%;
+}
+.hover-effect img:hover
+{
+  transform: scale(1.2);
+}
 nav{
     position: fixed!important;
     top: 0;
@@ -223,4 +230,14 @@ img{
 .content {
   z-index: 1; /* Keeps text above the overlay and video */
   text-align: center;
+}
+
+/* This forces the modal to be visible when React renders it */
+.modal {
+  display: block !important; 
+  background: rgba(0, 0, 0, 0.8); /* This creates the dark dim effect behind the modal */
+}
+
+.modal-dialog {
+  margin-top: 10%; /* Positions it nicely */
 }
