@@ -23,7 +23,7 @@ function Workshop() {
       name:"TOS Boring Machine",
       Model:"TOS WH-100",
       Description:"TOS Boring Machine is a boring machine that is used for boring various parts.",
-      Image:"/public/Machines/b100.jpg"
+      Image:"/Machines/b100.jpg"
     },
     {
       name:"TOS Boring Machine",
@@ -64,7 +64,7 @@ function Workshop() {
       Model:"M1TR",
       Make:"M1TR",
       Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
-      Image:"public/Machines/m1tr.jpg"
+      Image:"/Machines/m1tr.jpg"
 
     }
   ]

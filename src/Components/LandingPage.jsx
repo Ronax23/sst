@@ -12,17 +12,17 @@ export default function LandingPage() {
     {
         content:"Expert Precision in Every Component",
         p:"Specialized job-work for high-quality moulds, dies, and custom industrial parts tailored to your specifications",
-        imgsrc:"/public/Headers/Carousel1.jpg"     
+        imgsrc:"/Headers/Carousel1.jpg"     
     },
     {
         content:"Hydro-Turbine Part Specialists",
         p:"Delivering durable, high-performance components engineered to withstand the rigors of the power generation industry",
-        imgsrc:"/public/Headers/Carousel2.jpg"     
+        imgsrc:"/Headers/Carousel2.jpg"     
     },
     {
         content:"Advanced Tooling, Proven Reliability",
         p:"Combining years of workshop expertise with modern machining to ensure your projects are delivered on time and on spec",
-        imgsrc:"/public/Headers/Carousel3.jpg"     
+        imgsrc:"/Headers/Carousel3.jpg"     
     }
 ]
     const counterMap=[
