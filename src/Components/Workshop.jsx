@@ -106,8 +106,9 @@ function Workshop() {
       <section id="sec6">
         <div className="container">
           <div className="row">
+            <h2 className='text-center my-3'>Our Machines</h2>
             {machines.map((machine, index) => (
-              <div className="col-lg-4 my-5" key={index} onClick={()=>selectedMachineHandler(machine)}>
+              <div className="col-lg-4 col-md-6 my-5" key={index} onClick={()=>selectedMachineHandler(machine)}>
                 <div className="card">
                   <div className="card-img">
                     <img src={machine.Image} alt={machine.name} />

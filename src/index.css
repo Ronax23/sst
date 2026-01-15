@@ -9,9 +9,7 @@ https://demo.ovathemewp.com/tripgo_html/index.html */
   color: #ff4a52;
   margin-bottom: 20px;
 }
-.modal-dialog{
-    max-width: 80% !important;
-}
+
 #cardsSec
 {
   padding: 50px 0;
@@ -231,16 +229,27 @@ img{
 /* --- Breakpoints --- */
 
 /* Mobile: Show 2 logos (Width = 100% / 2) */
-:root { --logo-width: 50%; --pic-width:98% }
+
 
 /* Tablets: Show 4 logos (Width = 100% / 4) */
-@media (min-width: 768px) {
-  :root { --logo-width: 25%; --pic-width:48% }
-}
+
 
 /* Desktop: Show 5 logos (Width = 100% / 5) */
-@media (min-width: 1200px) {
+@media (max-width: 1920px) {
   :root { --logo-width: 20%; --pic-width:31% }
+  .modal-dialog{
+    max-width: 80% !important;
+}
+}
+@media (max-width: 1024px) {
+  :root { --logo-width: 25%; --pic-width:48% }
+}
+@media (max-width:450px)
+{
+  :root { --logo-width: 50%; --pic-width:98% }
+  .modal-dialog{
+    max-width: 100% !important;
+}
 }
 
 /* In your index.css or App.css */
