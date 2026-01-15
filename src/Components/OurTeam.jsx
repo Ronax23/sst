@@ -26,7 +26,7 @@ function OurTeam() {
 
     return (
         <div>
-            <HeaderReusable title="Our Team" image="/Headers/OurTeam.jpg" />
+            <HeaderReusable title="Our Team" image="/Headers/overview.jpg" />
             
             <section ref={sectionRef} id="sec5">
                 <div className="container-fluid sticky-box">

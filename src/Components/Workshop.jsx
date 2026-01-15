@@ -11,13 +11,13 @@ function Workshop() {
       name:"Kafo VMC",
       Model:"Kafo VMC B3122",
       Description:"Kafo VMC B3122 is a vertical machining center that is used for machining various parts."
-      ,Image:"https://www.kafo.com/images/products/kafo-vmc-b3122.jpg"
+      ,Image:"/Machines/vmc.jpg"
     },
     {
       name:"NeWay CNC",
       Model:"NeWay CNC Lathe",
       Description:"NeWay CNC Lathe is a lathe that is used for machining various parts.",
-      Image:"https://www.neway.com/images/products/neway-cnc-lathe.jpg"
+      Image:"/Machines/cnc.jpg"
     },
     {
       name:"TOS Boring Machine",
@@ -29,35 +29,42 @@ function Workshop() {
       name:"TOS Boring Machine",
       Model:"TOS WH-80",
       Description:"TOS Milling Machine is a milling machine that is used for milling various parts.",
-      Image:"https://www.tos.com/images/products/tos-milling-machine.jpg"
+      Image:"/Machines/b80.jpg"
     },
     {
       name:"Lathe Machine",
       Model:"Lathe 18 Foot",
       Make:"Batala Punjab 2006",
       Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"https://www.lathe.com/images/products/lathe-18-foot.jpg"
+      Image:"/Machines/l18.jpg"
     },
     {
       name:"Lathe Machine",
       Model:"Lathe 12 Foot",
       Make:"Batala Punjab 2006",
       Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"https://www.lathe.com/images/products/lathe-18-foot.jpg"
+      Image:"/Machines/l12.jpg"
     },
     {
       name:"Lathe Machine",
       Model:"Lathe 9 Foot",
       Make:"Rajkot Gujarat 2016",
       Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"https://www.lathe.com/images/products/lathe-18-foot.jpg"
+      Image:"/Machines/l9.jpg"
     },
     {
       name:"Lathe Machine",
       Model:"Lathe 10 Foot",
       Make:"Rajkot Gujarat 2017",
       Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"https://www.lathe.com/images/products/lathe-18-foot.jpg"
+      Image:"/Machines/l10.jpg"
+    },
+    {
+      name:"Lathe Machine",
+      Model:"Lathe 6 Foot",
+      Make:"Keloskar 1998",
+      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+      Image:"/Machines/l6.jpg"
     },
     {
       name:"M1TR",
@@ -65,6 +72,14 @@ function Workshop() {
       Make:"M1TR",
       Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
       Image:"/Machines/m1tr.jpg"
+
+    },
+    {
+      name:"Surface Grinder",
+      Model:"Guru Surface Grinder",
+      Make:"Faridabad 2015",
+      Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
+      Image:"/Machines/l6.jpg"
 
     }
   ]
