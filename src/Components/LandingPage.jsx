@@ -121,8 +121,15 @@ useEffect(() => {
     <section id="sec3">
     <div className="container">
         <div className="row">
-            <div className="col-lg-6 overflow-hidden hover-effect">
-                <LazyImage  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s" alt="Our Vision" className="img-fluid" />
+            <div className="col-lg-6  ">
+                <div className="img1 overflow-hidden position-relative">
+                <img  src="/Components/mould.jpg" alt="Our Vision" className="img-fluid" />
+                <div className="hover-img position-absolute">
+                    <img src="/Headers/Carousel2.jpg" alt="" />
+                </div>
+                </div>
+                
+
             </div>
             <div className="col-lg-6">
                 <h1>Our Vision</h1>
