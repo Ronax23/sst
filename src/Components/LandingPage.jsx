@@ -10,56 +10,59 @@ export default function LandingPage() {
 
     const dynamics=[
     {
-        content:"Welcome to SSTC",
-        imgsrc:"https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtcHVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"     
+        content:"Expert Precision in Every Component",
+        p:"Specialized job-work for high-quality moulds, dies, and custom industrial parts tailored to your specifications",
+        imgsrc:"/public/Headers/Carousel1.jpg"     
     },
     {
-        content:"Explore Our Courses",
-        imgsrc:"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"     
+        content:"Hydro-Turbine Part Specialists",
+        p:"Delivering durable, high-performance components engineered to withstand the rigors of the power generation industry",
+        imgsrc:"/public/Headers/Carousel2.jpg"     
     },
     {
-        content:"Join Our Community",
-        imgsrc:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2luZyUyMGluJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"     
+        content:"Advanced Tooling, Proven Reliability",
+        p:"Combining years of workshop expertise with modern machining to ensure your projects are delivered on time and on spec",
+        imgsrc:"/public/Headers/Carousel3.jpg"     
     }
 ]
     const counterMap=[
         {
-            count:150,
-            title:"Courses"
+            count:15,
+            title:"Years of Excellence"
         },
         {
-            count:1000,
-            title:"Students"
+            count:500,
+            title:"Projects Delivered"
         },
         {
-            count:50,
-            title:"Instructors"
+            count:200,
+            title:"Precision Moulds"
         },
         {
-            count:25,
-            title:"Awards"
+            count:120,
+            title:"Satisfied Clients"
         }
     ]
     const CardsMap=[
         {
-            icon:"bi bi-google",
-            title:"Web Development",
-            desc:"Learn to build modern, responsive websites and web applications using the latest technologies and frameworks."
+            icon:"bi bi-bullseye",
+            title:"Precision-First Approach",
+            desc:"Ensuring exact tolerances in every mould and die we craft"
         },
         {
-            icon:"bi bi-android",
-            title:"Mobile App Development",
-            desc:"Master the art of creating mobile applications for iOS and Android platforms using popular development tools."
+            icon:"bi-gear-wide-connected",
+            title:"Technical Mastery",
+            desc:"Deep expertise in the specialized manufacturing of hydro-turbine components"
         },
         {
-            icon:"bi bi-database",
-            title:"Data Science",
-            desc:"Dive into data analysis, visualization, and machine learning techniques to extract insights from complex datasets."
+            icon:"bi-patch-check",
+            title:"Uncompromising Quality",
+            desc:"Rigorous testing protocols to guarantee durability in high-stress environments"
         },
         {
-            icon:"bi bi-cloud",
-            title:"Cloud Computing",
-            desc:"Gain expertise in cloud platforms like AWS, Azure, and Google Cloud to deploy and manage scalable applications."
+            icon:"bi-clock-history",
+            title:"On-Time Execution",
+            desc:"Streamlined workshop management to meet your critical project deadlines"
         }
     ];
     const ref = useRef();
@@ -101,8 +104,9 @@ useEffect(() => {
     style={{ '--image-url': `url(${item.imgsrc})` }}>
             <div className='container'>
                 <div className='row mb-5'>
-                    <div className='col-lg-6 my-5 '>
-                        <h1>{item.content}</h1>
+                    <div className='col-lg-6 my-5 carousel-mover'>
+                        <h1 className='text-white'>{item.content}</h1>
+                        <p className='text-white mt-4'>{item.p}</p>
                     </div>
                 </div>
             </div>
@@ -131,6 +135,8 @@ useEffect(() => {
     </section>
 
    <CardsSec dynamicdat={CardsMap}/>
+
+
     <section id="counterSection" className='my-5' ref={ref}>
         <div className="container">
             <div className="row text-center">

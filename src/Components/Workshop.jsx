@@ -23,7 +23,7 @@ function Workshop() {
       name:"TOS Boring Machine",
       Model:"TOS WH-100",
       Description:"TOS Boring Machine is a boring machine that is used for boring various parts.",
-      Image:"https://www.tos.com/images/products/tos-boring-machine.jpg"
+      Image:"/public/Machines/b100.jpg"
     },
     {
       name:"TOS Boring Machine",
@@ -64,7 +64,7 @@ function Workshop() {
       Model:"M1TR",
       Make:"M1TR",
       Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
-      Image:"https://www.m1tr.com/images/products/m1tr.jpg"
+      Image:"public/Machines/m1tr.jpg"
 
     }
   ]
@@ -84,7 +84,7 @@ function Workshop() {
       <header className="hero-container">
       {/* 1. The Video Background */}
       <video 
-        src="/Headers/sage.mp4" 
+        src="/Headers/VMC.mp4" 
         autoPlay 
         loop 
         muted 
@@ -107,11 +107,13 @@ function Workshop() {
         <div className="container">
           <div className="row">
             {machines.map((machine, index) => (
-              <div className="col-lg-4" key={index} onClick={()=>selectedMachineHandler(machine)}>
+              <div className="col-lg-4 my-5" key={index} onClick={()=>selectedMachineHandler(machine)}>
                 <div className="card">
-                  <img src={machine.Image} alt={machine.name} />
+                  <div className="card-img">
+                    <img src={machine.Image} alt={machine.name} />
+                  </div>
                   <div className="card-body">
-                    <h3>{machine.name}</h3>
+                    <h3>{machine.Model}</h3>
                   </div>
                 </div>
               </div>
@@ -130,10 +132,10 @@ function Workshop() {
           </div>
           <div className="modal-body">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-7">
                 <img src={selectedMachine.Image} alt={selectedMachine.name} />
               </div>
-              <div className="col-lg-8">
+              <div className="col-lg-5">
                 <h5>{selectedMachine.name}</h5>
                 <p>{selectedMachine.Model +" "&& +selectedMachine.Make}</p>
                 <p>{selectedMachine.Make}</p>

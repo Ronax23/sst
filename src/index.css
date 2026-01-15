@@ -3,9 +3,95 @@ https://validthemes.net/site-template/fatory/index-4.html
 
 https://demo.ovathemewp.com/tripgo_html/index.html */
 
+
+.iconprop{
+  font-size: 50px;
+  color: #ff4a52;
+  margin-bottom: 20px;
+}
+.modal-dialog{
+    max-width: 80% !important;
+}
+#cardsSec
+{
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  
+}
+#cardsSec .hover-bound
+{
+  position: relative;
+  overflow: hidden;
+}
+#cardsSec .hover-bound::before,#cardsSec .hover-bound::after
+{
+  content: "";
+  position: absolute;
+  width: 100%;
+  transition-duration: .5s;
+}
+#cardsSec .hover-bound::before
+{
+  top: 0;
+  border: 2px solid #ff4a52;
+  left: -100%;
+}
+#cardsSec .hover-bound::after
+{
+  border: 2px solid #fa16f6;
+  bottom: 0;
+  right: -100%;
+}
+#cardsSec .hover-bound:hover::before
+{
+  left: 0;
+}
+#cardsSec .hover-bound:hover::after
+{
+  right: 0%;
+}
+#sec6 .card {
+  overflow: hidden;
+  position: relative;
+}
+.card-img
+{
+  overflow: hidden;
+}
+#sec6 .card::before
+{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  border: 1px solid #ff4a52;
+  transition: left .6s ease-in-out;
+}
+#sec6 .card:hover::before
+{
+  left: 0;
+}
+#sec6 .card img
+{
+  object-fit: cover;
+  object-position: top;
+  transition-duration: .5s;
+  aspect-ratio: 3/2;
+}
+#sec6 .card img:hover
+{
+  transform: scale(1.1);
+}
 #contactus{
     
 }
+.carousel-mover{
+
+  animation: slideInLeft 1s ease-out forwards;
+  padding-top: 200px;
+}
+
 .hover-effect img{
   transition-duration: .5s;
   width: 100%;
@@ -55,7 +141,7 @@ nav .nav-link:hover::before {
    offset: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.9)), var(--image-url);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9)), var(--image-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -241,3 +327,6 @@ img{
 .modal-dialog {
   margin-top: 10%; /* Positions it nicely */
 }
+
+
+

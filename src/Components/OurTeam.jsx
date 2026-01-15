@@ -22,40 +22,7 @@ function OurTeam() {
     const sectionRef = useRef(null)
     const trackRef = useRef(null)
 
-    useEffect(() => {
-        const track = trackRef.current
-        const section = sectionRef.current
-        if (!track || !section) return
-        
-        const container = track.parentElement
-        
-        // Wait for lazy images to load before calculating scroll distance
-        const initScroll = () => {
-            const distance = track.scrollWidth - container.offsetWidth
-            
-            gsap.to(track, {
-                x: -distance,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "+=300vh",
-                    pin: container,
-                    scrub: 1,
-                    invalidateOnRefresh: true
-                }
-            })
-        }
 
-        // Wait a bit for lazy images to start loading
-        setTimeout(() => {
-            initScroll()
-            // Refresh after images load
-            setTimeout(() => ScrollTrigger.refresh(), 1000)
-        }, 300)
-
-        return () => ScrollTrigger.getAll().forEach(t => t.kill())
-    }, [])
 
     return (
         <div>
