@@ -12,11 +12,12 @@ const OurTeam= lazy(()=>import ('./Components/OurTeam.jsx'));
 const Terms= lazy(()=>import ('./Components/Terms.jsx'));
 const Workshop= lazy(()=>import ('./Components/Workshop.jsx'));
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import LoaderError from './assets/Reusable/LoaderError.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <Suspense fallback={<div className="d-flex justify-content-center mt-5">Loading...</div>}>
+    <Suspense fallback={<LoaderError loading={true} />}>
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route path="/" element={<LandingPage />} />
@@ -25,8 +26,9 @@ createRoot(document.getElementById('root')).render(
           <Route path="terms-of-service" element={<Terms />} />
           <Route path="workshop" element={<Workshop />} />
         </Route>
+        <Route path="*" element={<LoaderError hasError={true} />} />
       </Routes>
           </Suspense>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )

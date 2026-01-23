@@ -3,7 +3,20 @@ https://validthemes.net/site-template/fatory/index-4.html
 
 https://demo.ovathemewp.com/tripgo_html/index.html */
 
-
+.lottie-container
+{
+  width: 100%;
+  min-width: 300px;
+  max-width: 800px;
+aspect-ratio: 1/1;
+}
+.lottie-container-gear
+{
+  width: 100%;
+  min-width: 150px;
+  max-width: 300px;
+aspect-ratio: 1/1;
+}
 .iconprop{
   font-size: 50px;
   color: #ff4a52;
