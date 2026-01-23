@@ -152,10 +152,10 @@ function Workshop() {
                 <img src={selectedMachine.Image} alt={selectedMachine.name} />
               </div>
               <div className="col-lg-5">
-                <h5>{selectedMachine.name}</h5>
-                <p>{selectedMachine.Model +" "&& +selectedMachine.Make}</p>
-                <p>{selectedMachine.Make}</p>
-                <p>{selectedMachine.Description}</p>
+                <h5>{selectedMachine?.name}</h5>
+                <p>{selectedMachine?.Model +" "&& +selectedMachine?.Make}</p>
+                <p>{selectedMachine?.Make}</p>
+                <p>{selectedMachine?.Description}</p>
               </div>
             </div>
           </div>
