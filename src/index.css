@@ -27,7 +27,10 @@ https://demo.ovathemewp.com/tripgo_html/index.html */
 
 *{
   font-family: 'Enriqueta', 'Times New Roman', Times, serif;
-  cursor: url('../cursor/pointer.png'), pointer;
+}
+body 
+{
+    cursor: url('../cursor/pointer.png'), pointer;
 }
 .lottie-container
 {
@@ -268,7 +271,7 @@ img{
 }
 #OurTeam
 {
- margin: 100px 0;
+ padding: 25vh 0;
   background-color: #f8f9fa;
 }
 /* --- Breakpoints --- */

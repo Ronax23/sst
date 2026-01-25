@@ -38,8 +38,6 @@ useLayoutEffect(() => {
                 end: () => `+=${trackRef.current.scrollWidth - window.innerWidth}`,
                 scrub: 1,
                 invalidateOnRefresh: true,
-                // This helps debug - remove after it works
-                // markers: true, 
             }
         });
     }, sectionRef);
