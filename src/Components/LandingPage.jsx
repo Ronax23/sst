@@ -149,8 +149,10 @@ useEffect(() => {
             <div className="row text-center">
                 {counterMap.map((item, index)=>(
                     <div className="col-lg-3 col-6" key={index}>
-                        <h2>{Math.min(adder, item.count)}+</h2>
+                       <div className="cards">
+                         <h2>{Math.min(adder, item.count)}+</h2>
                         <p>{item.title}</p>
+                       </div>
                     </div>
                 ))}
             </div>

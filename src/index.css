@@ -2,7 +2,33 @@
 https://validthemes.net/site-template/fatory/index-4.html
 
 https://demo.ovathemewp.com/tripgo_html/index.html */
+::-webkit-scrollbar-thumb
+{
+  background-color: #ff4a52;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track
+{
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar
+{
+  width: 4px;
+}
 
+@font-face {
+  font-family: 'Enriqueta';
+  src: url('./fonts/Enriqueta-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*{
+  font-family: 'Enriqueta', 'Times New Roman', Times, serif;
+  cursor: url('../cursor/pointer.png'), pointer;
+}
 .lottie-container
 {
   width: 100%;
@@ -33,6 +59,7 @@ aspect-ratio: 1/1;
 {
   position: relative;
   overflow: hidden;
+    transition-duration: .5s;
 }
 #cardsSec .hover-bound::before,#cardsSec .hover-bound::after
 {
@@ -60,6 +87,10 @@ aspect-ratio: 1/1;
 #cardsSec .hover-bound:hover::after
 {
   right: 0%;
+}
+#cardsSec .hover-bound:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
 }
 #sec6 .card {
   overflow: hidden;
@@ -217,7 +248,7 @@ img{
   transition: transform 0.4s ease-in-out;
   transform: translateX(calc(-1 * var(--logo-width)));
 }
-.logo-card, .dynamicSizer {
+.logo-card {
   flex: 0 0 var(--logo-width);
   display: flex;
   justify-content: space-between;
@@ -235,9 +266,10 @@ img{
   filter: grayscale(50%);
 
 }
-
-.dynamicSizer {
-  flex: 0 0 var(--pic-width);
+#OurTeam
+{
+ margin: 100px 0;
+  background-color: #f8f9fa;
 }
 /* --- Breakpoints --- */
 
@@ -365,6 +397,69 @@ img{
 .modal-dialog {
   margin-top: 10%; /* Positions it nicely */
 }
-
-
-
+.breadcrumb-item+.breadcrumb-item::before
+{
+  color: #f5f5f5 !important;
+}
+.term-col
+{
+  color: #015DA9;
+}
+.footer-heads
+{
+position: relative;
+text-transform: capitalize;
+margin-bottom: 20px;
+}
+.footer-heads::before
+{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #ff4a52;
+  bottom: -5px;
+  left: 0;
+}
+.col-lg-3:not(:first-child) .footerLink::before
+{
+  content: "\F151";
+  font-family: "bootstrap-icons"; 
+  display: inline-block;
+  color: cornflowerblue;
+  margin-right: 8px;
+}
+.footerLink
+{
+  transition:.5s;
+}
+.col-lg-3:not(:first-child) .footerLink:hover
+{
+  transform: translateX(5px);
+}
+#counterSection
+{
+  padding: 100px 0;
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9)), url("../public/Backgrounds/counter.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;font-weight: bold;
+}
+#counterSection  .cards
+{
+  backdrop-filter: blur(8px);
+  background-color: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  border-radius: 50px 20px 50px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+#counterSection .cards:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}

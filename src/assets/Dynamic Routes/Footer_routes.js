@@ -1,6 +1,24 @@
 export const Footer_route=[
 
     {
+        title:"contact us",
+        links:[
+            {
+                Name:"Shiv Shakti Technocrates"
+            },
+            {
+                Name:"Address: Saroorpur Industrial Area Faridabad"
+            },
+            {
+                Name:"Email: shivshakti_fbd@yahoo.co.in"
+            },
+            {
+                Name:"Phone: +91-9876543210"
+            }
+            
+        ]
+    },
+    {
         title: "Quick Links",
         links: [
             {

@@ -2,7 +2,8 @@ import React from 'react'
 import HeaderReusable from '../assets/Reusable/HeaderReusable';
 import { useForm } from "react-hook-form"
 import toast, { Toaster } from 'react-hot-toast';
-
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css';
 function ContactUs() {
   const callig="/Headers/Contact.jpg";
   const { register, handleSubmit, formState: { errors } } = useForm({
@@ -14,11 +15,12 @@ function ContactUs() {
     FormSucess();
     // Here you can handle the form submission, e.g., send the data to a server
   };
+  const location=[28.35537457581717, 77.27498147598868]
   return (
    <>   
    <HeaderReusable title="Contact Us" image={callig}/>
 
-      <section className="contact-section">
+      <section className="contact-section py-5">
         <div className="container">
           <div className="row justify-content-center">
              <div className="col-lg-6 col-12">
@@ -53,10 +55,15 @@ function ContactUs() {
              </div>
              </section>
 
-      <section className="map-section">
-        <div className="container-fluid p-0">
-
-</div>
+      <section className="map-section py-5">
+        <div className="container-fluid p-0 overflow-hidden">
+    <MapContainer center={location} zoom={20} style={{ height: "600px", width: "100%" }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution="&copy; OpenStreetMap contributors"
+      />
+    </MapContainer>
+   </div>
       </section>
    
    </>

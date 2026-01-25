@@ -105,6 +105,7 @@ function Workshop() {
         muted 
         playsInline 
         className="back-video"
+        loading="lazy"
       />
 
       {/* 2. The Dark Overlay (Makes text easier to read) */}
