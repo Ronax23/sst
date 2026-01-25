@@ -3,19 +3,19 @@ import LazyImage from './LazyImage'
 
 const dynamicSelector={
   Hydro_Engineering:{
-    img:"../public/Headers/Carousel2.jpg",
+    img:"/Headers/Carousel2.jpg",
     p:"We manufacture high-durability fluid components including turbine runners and pressure valves. Our engineering focuses on extreme corrosion resistance and zero-leakage performance for sustainable water power and management infrastructures."
     },
   Component_Jobwork:{
-    img:"../public/Components/cast2.jpg",
+    img:"/Components/cast2.jpg",
     p:"We provide high-tolerance jobwork utilizing advanced CNC, VMC, and Lathe technologies. This division specializes in subtractive manufacturing and multi-axis milling to deliver custom-engineered components with superior surface finishes. Our processes ensure exact dimensional accuracy for both rapid prototyping and high-volume industrial production."
   },
   Precision_Die_Moulding:{
-    img:"../public/Components/diecast.jpg",
+    img:"/Components/diecast.jpg",
     p:"We design and fabricate high-complexity moulds with micron-level tolerances for mass production. Our CNC-machined tooling ensures perfect repeatability and structural integrity for millions of identical plastic and metal components."
   },
   Industrial_Press_Components:{
-    img:"../public/Components/press.jpg",
+    img:"/Components/press.jpg",
     p:"Focused on heavy-duty force, we engineer robust frames and hydraulic cylinders for industrial press machinery. Our components are built to withstand high-tonnage impacts while maintaining surgical precision in shearing and forming operations"
   }
 }
