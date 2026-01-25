@@ -1,10 +1,26 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Nav_Route } from '../Dynamic Routes/Nav_routes'
 
 function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-   <nav className="navbar navbar-expand-lg bg-body-transparent">
+   <nav className={`navbar navbar-expand-lg ${scrolled ? 'nav-bgs' : 'bg-body-transparent'}`}>
   <section className="container-fluid p-3">
     <Link className="navbar-brand text-light" to="/">SSTC</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

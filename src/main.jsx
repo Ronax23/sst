@@ -13,6 +13,7 @@ const Terms= lazy(()=>import ('./Components/Terms.jsx'));
 const Workshop= lazy(()=>import ('./Components/Workshop.jsx'));
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import LoaderError from './assets/Reusable/LoaderError.jsx';
+const Services= lazy(()=>import ('./Components/Services.jsx'));
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="team" element={<OurTeam />} />
           <Route path="terms-of-service" element={<Terms />} />
           <Route path="workshop" element={<Workshop />} />
+          <Route path="services" element={<Services />} />
         </Route>
         <Route path="*" element={<LoaderError hasError={true} />} />
       </Routes>

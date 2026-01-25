@@ -5,6 +5,7 @@ import ServiceTabs from '../assets/Reusable/ServiceTabs'
 import { Link } from 'react-router-dom'
 import CardsSec from '../assets/Reusable/CardsSec'
 import LazyImage from '../assets/Reusable/LazyImage'
+import SliderMac from '../assets/Reusable/SliderMac'
 
 export default function LandingPage() {
 
@@ -121,7 +122,8 @@ useEffect(() => {
     <section id="sec3">
     <div className="container">
         <div className="row">
-            <div className="col-lg-6  ">
+            <h1 className='text-center my-3'>Our Vision</h1>
+            <div className="col-lg-6  my-2">
                 <div className="img1 overflow-hidden position-relative">
                 <img  src="/Components/mould.jpg" alt="Our Vision" className="img-fluid" />
                 <div className="hover-img position-absolute">
@@ -131,10 +133,10 @@ useEffect(() => {
                 
 
             </div>
-            <div className="col-lg-6">
-                <h1>Our Vision</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <Link to="/workshop">Learn More</Link>
+            <div className="col-lg-6 mt-5">
+                <h2>Precision. Progress. Partnership. Sub-heading</h2>
+                <p>To lead the next industrial revolution by integrating advanced CNC technology with master craftsmanship, ensuring that every component we deliver is a testament to Indian engineering excellence on the global stage</p>
+                 <Link to="/workshop" className='btn btn-success'>Learn More</Link>
             </div>
         </div>
     </div>

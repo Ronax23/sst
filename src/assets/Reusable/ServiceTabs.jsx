@@ -2,21 +2,21 @@ import {useState} from 'react'
 import LazyImage from './LazyImage'
 
 const dynamicSelector={
-  HYDRO:{
-    img:"https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FtcHVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    p:"Discover the power of water with our comprehensive Hydrology courses. Dive into the study of water cycles, distribution, and management to make a splash in your career."
+  Hydro_Engineering:{
+    img:"../public/Headers/Carousel2.jpg",
+    p:"We manufacture high-durability fluid components including turbine runners and pressure valves. Our engineering focuses on extreme corrosion resistance and zero-leakage performance for sustainable water power and management infrastructures."
+    },
+  Component_Jobwork:{
+    img:"../public/Components/cast2.jpg",
+    p:"We provide high-tolerance jobwork utilizing advanced CNC, VMC, and Lathe technologies. This division specializes in subtractive manufacturing and multi-axis milling to deliver custom-engineered components with superior surface finishes. Our processes ensure exact dimensional accuracy for both rapid prototyping and high-volume industrial production."
   },
-  Water_Heaters:{
-    img:"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-    p:"Heat things up with our expert-led Water Heater courses. Learn the ins and outs of installation, maintenance, and repair to keep the warmth flowing."
+  Precision_Die_Moulding:{
+    img:"../public/Components/diecast.jpg",
+    p:"We design and fabricate high-complexity moulds with micron-level tolerances for mass production. Our CNC-machined tooling ensures perfect repeatability and structural integrity for millions of identical plastic and metal components."
   },
-  Die_Moulding:{
-    img:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2luZyUyMGluJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    p:"Shape your future with our specialized Die Moulding courses. Master the techniques of mould design, fabrication, and production to create precision-engineered components."
-  },
-  Press_Machine:{
-    img:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2luZyUyMGluJTIwY29tbXVuaXR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    p:"Get hands-on with our Press Machine courses. Learn the operation, safety protocols, and maintenance of press machinery to excel in manufacturing environments."
+  Industrial_Press_Components:{
+    img:"../public/Components/press.jpg",
+    p:"Focused on heavy-duty force, we engineer robust frames and hydraulic cylinders for industrial press machinery. Our components are built to withstand high-tonnage impacts while maintaining surgical precision in shearing and forming operations"
   }
 }
 
@@ -29,12 +29,12 @@ function ServiceTabs() {
     <section id="sec4">
         <div className='container my-5'>
             <div className='row'>
-                    <h2>Our Courses</h2>
-                    <p>Explore our diverse range of courses designed to empower you with the skills and knowledge needed to excel in your career.</p>
+                    <h1 className='text-center my-3'>Our Core Expertise</h1>
+                    <p>We specialize in transforming complex engineering challenges into high-performance components. Explore our core operational verticals, where advanced technology meets specialized craftsmanship to serve the unique demands of global industries</p>
                 </div>
-                 <div className='row'>
+                 <div className='row my-3'>
 
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-3 col-md-4 my-4">
                 <div className="list-group" id="list-tab" role="tablist">
                  {Object.entries(dynamicSelector).map(([key, item]) => (
           <button 
@@ -56,7 +56,7 @@ function ServiceTabs() {
           key={`text-${selected}`} // Forces animation restart
         >
           <h1 className="fw-bold text-primary">
-            {selected.replace("_", " ")}
+            {selected.replace(/_/g, ' ')}
           </h1>
           <p className="lead">{dynamicSelector[selected].p}</p>
         </div>

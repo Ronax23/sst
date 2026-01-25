@@ -13,7 +13,7 @@ export const Footer_route=[
                 Name:"Email: shivshakti_fbd@yahoo.co.in"
             },
             {
-                Name:"Phone: +91-9876543210"
+                Name:"Phone: +91-9810592350"
             }
             
         ]

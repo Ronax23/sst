@@ -74,7 +74,7 @@ const [logos, setLogos] = useState(comp_logo);
   }, [isPaused]);
 
   return (
-    <section className="brand-section">
+    <section className="brand-section p-50">
       <div className="container">
         <h2 className="text-center mb-5">Our Clients</h2>
         <div className="slider-window" onMouseEnter={() => setIsPaused(true)}
