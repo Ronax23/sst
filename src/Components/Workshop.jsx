@@ -1,11 +1,10 @@
 import React ,{useState}from 'react'
-
-// Inside your Workshop component:
-// Trigger every time 'modal' state changes
+import { motion, AnimatePresence } from 'motion/react';
 
 function Workshop() {
   const [selectedMachine, setSelectedMachine] = useState(null)
   const [modal, setModal] = useState(false)
+  const [mover,setMover]=useState(3)
   const machines=[
     {
       name:"Kafo VMC",
@@ -85,7 +84,6 @@ function Workshop() {
   ]
   const selectedMachineHandler=(index)=>{
     setSelectedMachine(index)
-    console.log(selectedMachine)
     setModal(true)
   }
   const closeModal = () => {
@@ -93,6 +91,13 @@ function Workshop() {
     setSelectedMachine(null)
   }
 
+  const Movehandle=(step)=>{
+    setMover((prev) => {
+      if ((prev + step) < 3) return 3;
+      if ((prev + step) > machines.length) return machines.length;
+      return (prev + step);
+    });
+  }
 
   return (
     <>
@@ -121,11 +126,18 @@ function Workshop() {
 
       <section id="sec6">
         <div className="container">
-          <div className="row">
+          <motion.div 
+      layout 
+      className="row" 
+      transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}>
             <h2 className='text-center my-3'>Our Machines</h2>
-            {machines.map((machine, index) => (
-              <div className="col-lg-4 col-md-6 my-5" key={index} onClick={()=>selectedMachineHandler(machine)}>
-                <div className="card">
+            <AnimatePresence>
+            {machines.slice(0,mover).map((machine, index) => (
+              <motion.div initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }} className="col-lg-4 col-md-6 my-5" key={index} onClick={()=>selectedMachineHandler(machine)}>
+                <div className="card card-wrapper">
                   <div className="card-img">
                     <img src={machine.Image} alt={machine.name} />
                   </div>
@@ -133,15 +145,29 @@ function Workshop() {
                     <h3>{machine.Model}</h3>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+            </AnimatePresence>
+            <div className="d-flex text-center justify-content-center gap-3 my-4 w-100">
+              <button className='btn' disabled={mover <= 3} onClick={()=>Movehandle(-3)}><i class="bi bi-arrow-up-circle-fill"></i></button>
+            <button className='btn' disabled={mover >= machines.length} onClick={()=>Movehandle(3)}><i class="bi bi-arrow-down-circle-fill"></i></button>
+            </div>
+          </motion.div>
         </div>
       </section>
-    
+    <AnimatePresence>
     {modal && selectedMachine && (
-      <div className="modal"  tabindex="-1" onClick={closeModal}>
-      <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
+      <motion.div className="modal"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+        tabindex="-1" onClick={closeModal}>
+      <div className="modal-dialog"
+      initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -100, opacity: 0 }}
+      
+      onClick={(e) => e.stopPropagation()}>
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Machine Details</h5>
@@ -162,7 +188,8 @@ function Workshop() {
           </div>
         </div>
       </div>
-    </div>)}
+    </motion.div>)}
+    </AnimatePresence>
     </>
   )
 }

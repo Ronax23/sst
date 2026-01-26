@@ -38,7 +38,7 @@ function ServiceTabs() {
                 <div className="list-group" id="list-tab" role="tablist">
                  {Object.entries(dynamicSelector).map(([key, item]) => (
           <button 
-            onClick={() => setSelected(key)} // Just set the string
+            onClick={() => setSelected(key)} 
             className={`list-group-item ${selected === key ? 'SelectionActive animate-content' : ''}`}
           >
             {key.replace(/_/g, ' ')}
@@ -53,7 +53,7 @@ function ServiceTabs() {
                    <div className="row">
                      <div 
           className="col-lg-6 text-animate" 
-          key={`text-${selected}`} // Forces animation restart
+          key={`text-${selected}`} 
         >
           <h1 className="fw-bold text-primary">
             {selected.replace(/_/g, ' ')}
@@ -61,10 +61,10 @@ function ServiceTabs() {
           <p className="lead">{dynamicSelector[selected].p}</p>
         </div>
         
-        {/* IMAGE COLUMN */}
+        
         <div 
           className="col-lg-6 img-animate" 
-          key={`img-${selected}`} // Forces animation restart
+          key={`img-${selected}`} 
         > 
           <LazyImage 
             src={dynamicSelector[selected].img} 
