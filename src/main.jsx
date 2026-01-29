@@ -5,6 +5,7 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import AnimatedCursor from "./Components/AnimatedCursor.jsx";
 const LandingPage=lazy(()=> import ('./Components/LandingPage.jsx'));
 const ContactUs= lazy(()=> import ('./Components/ContactUs.jsx'));
 const MainPage= lazy(()=>import ('./Components/MainPage.jsx'));
@@ -18,6 +19,7 @@ const Services= lazy(()=>import ('./Components/Services.jsx'));
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+    <AnimatedCursor />
     <Suspense fallback={<LoaderError loading={true} />}>
       <Routes>
         <Route path="/" element={<MainPage />}>

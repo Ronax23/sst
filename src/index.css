@@ -16,7 +16,18 @@ https://demo.ovathemewp.com/tripgo_html/index.html */
 {
   width: 4px;
 }
-
+.mousepoint{
+  top: 35px;
+  left: 30px;
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  z-index: 9999;
+  position: fixed;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
 @font-face {
   font-family: 'Enriqueta';
   src: url('/fonts/Enriqueta-SemiBold.ttf') format('truetype');
