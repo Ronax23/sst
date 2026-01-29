@@ -19,11 +19,12 @@ https://demo.ovathemewp.com/tripgo_html/index.html */
 
 @font-face {
   font-family: 'Enriqueta';
-  src: url('./fonts/Enriqueta-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Enriqueta-SemiBold.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
 }
-
+html {
+}
 
 *{
   font-family: 'Enriqueta', 'Times New Roman', Times, serif;
@@ -283,22 +284,7 @@ img{
 
 
 /* Desktop: Show 5 logos (Width = 100% / 5) */
-@media (max-width: 1920px) {
-  :root { --logo-width: 20%; --pic-width:31% }
-  .modal-dialog{
-    max-width: 80% !important;
-}
-}
-@media (max-width: 1024px) {
-  :root { --logo-width: 25%; --pic-width:48% }
-}
-@media (max-width:450px)
-{
-  :root { --logo-width: 50%; --pic-width:98% }
-  .modal-dialog{
-    max-width: 100% !important;
-}
-}
+
 
 /* In your index.css or App.css */
 .SelectionActive {
@@ -494,4 +480,53 @@ margin-bottom: 20px;
 .card-wrapper:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+footer 
+{
+  background-color: #DAD8C9;
+  padding: 50px 0;
+}
+.contactBanner
+{
+  padding: 100px 0 !important;
+  background-position: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(40, 46, 37, 0.6),rgba(69, 76, 65, 0.6)), url(/Backgrounds/contactBanner.jpg);
+}
+.contact-section
+{
+  color: white;
+  padding: 50px 0;
+  background-image: linear-gradient(to right,rgba(231, 217, 232, 0.8),rgba(26, 27, 25, 0.8)),url(/Backgrounds/contact.jpg);
+}
+.mapstyle
+{
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 1920px) {
+  :root { --logo-width: 20%; --pic-width:31% }
+  .modal-dialog{
+    max-width: 80% !important;
+}
+}
+@media (max-width: 1024px) {
+  :root { --logo-width: 25%; --pic-width:48% }
+  .mapstyle
+{
+  height: 400px;
+}
+}
+@media (max-width:450px)
+{
+  :root { --logo-width: 50%; --pic-width:98% }
+  .mapstyle
+{
+  height: 200px;
+}
+  .modal-dialog{
+    max-width: 100% !important;
+}
 }

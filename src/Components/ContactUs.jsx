@@ -5,28 +5,31 @@ import toast, { Toaster } from 'react-hot-toast';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 function ContactUs() {
-  const callig="/Headers/Contact.jpg";
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const calling="/Headers/Contact.jpg";
+    const callig="/Backgrounds/call.jpg";
+  const { register, handleSubmit,reset, formState: { errors } } = useForm({
     mode: "onBlur"
   });
   const FormSucess = () => toast.success('Message sent successfully!');
   const onSubmit = data => {
     console.log(data);
     FormSucess();
+    reset();
+    
     // Here you can handle the form submission, e.g., send the data to a server
   };
   const location=[28.35537457581717, 77.27498147598868]
   return (
    <>   
-   <HeaderReusable title="Contact Us" image={callig}/>
+   <HeaderReusable title="Contact Us" image={calling}/>
 
       <section className="contact-section py-5">
         <div className="container">
           <div className="row justify-content-center">
-             <div className="col-lg-6 col-12">
-              <img src={callig} alt="" />
+             <div className="col-lg-5 col-12 rounded">
+              <img src={callig} alt="" className='rounded-circle'/>
              </div>
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-7 col-12">
               <h2 className="text-center mb-4">Get in Touch</h2>
               <form onSubmit={handleSubmit(onSubmit)}>
     <Toaster />
@@ -35,7 +38,7 @@ function ContactUs() {
         {errors.name?.type==="required" && <span className="text-danger">This field is required</span>}
         {errors.name?.type==="maxLength" && <span className="text-danger">Maximum length is 20 characters</span>}
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">Email address</label>
+        <label htmlFor="email" className="form-label my-3">Email address</label>
         <input type="email" className="form-control" id="email" placeholder="" {...register("email", { required: true,pattern:/@/ })} />
         {errors.email?.type==="required" && <span className="text-danger">This field is required</span>}
         {errors.email?.type==="pattern" && <span className="text-danger">Please enter a valid email address</span>}
@@ -55,9 +58,10 @@ function ContactUs() {
              </div>
              </section>
 
-      <section className="map-section py-5">
+      <section className="map-section">
         <div className="container-fluid p-0 overflow-hidden">
-    <MapContainer center={location} zoom={20} style={{ height: "600px", width: "100%" }}>
+          <h1 className='text-center'>Locate Us</h1>
+    <MapContainer center={location} zoom={20} className='mapstyle'>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors"

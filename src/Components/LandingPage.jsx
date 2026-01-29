@@ -1,14 +1,18 @@
 import React, { useState,useEffect,useRef } from 'react'
 import BrandSection from '../assets/Reusable/BrandSection'
-import ContactUs from './ContactUs'
 import ServiceTabs from '../assets/Reusable/ServiceTabs'
 import { Link } from 'react-router-dom'
 import CardsSec from '../assets/Reusable/CardsSec'
-import LazyImage from '../assets/Reusable/LazyImage'
-import SliderMac from '../assets/Reusable/SliderMac'
+import { useData } from '../context/Context.jsx'
+import LoaderError from '../assets/Reusable/LoaderError.jsx'
 
 export default function LandingPage() {
-
+    // const counterMap=data.counterMap;
+    // const CardsMap=data.CardsMap;
+    // const dynamics=data.dynamics;
+    const { data,loading } = useData();
+    console.log(data);
+    
     const dynamics=[
     {
         content:"Expert Precision in Every Component",
@@ -66,6 +70,9 @@ export default function LandingPage() {
             desc:"Streamlined workshop management to meet your critical project deadlines"
         }
     ];
+  
+
+
     const ref = useRef();
     const [adder, setAdder] = useState(0);
 const maxCount = Math.max(...counterMap.map(item => item.count));
@@ -93,7 +100,9 @@ useEffect(() => {
     };
 }, []); // Runs once when page opens
 
-
+// if (loading || !data) {
+//     return <LoaderError/>
+//   }
   return (
     <>
     <header id='main'>
@@ -146,7 +155,7 @@ useEffect(() => {
    <CardsSec dynamicdat={CardsMap}/>
 
 
-    <section id="counterSection" className='my-5' ref={ref}>
+    <section id="counterSection"  ref={ref}>
         <div className="container">
             <div className="row text-center">
                 {counterMap.map((item, index)=>(
@@ -163,7 +172,16 @@ useEffect(() => {
 
     <ServiceTabs/>
 
-    
+    <div className="contactBanner">
+       <div className="container">
+         <div className="row">
+            <div className="col-lg-6 col-md-8 col-12">
+                <h1 className='my-5'>{`Leveraging Over ${new Date().getFullYear() - 2011} Years of Expertise in Precision Manufacturing`}</h1>
+            </div>
+            <div className="col-lg-6 col-md-4 col-12 align-content-center text-lg-end"><Link to="/contact" className='btn btn-lg btn-success'>Contact Us</Link></div>
+        </div>  
+       </div>
+    </div>
 
     </>
   )
