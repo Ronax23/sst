@@ -14,7 +14,8 @@ export default function Footer() {
                         {item.links.map((link)=>(
 
                             <li key={link.id} className='footerLink'>
-                                {link.links?<Link to={link.links} className=' text-decoration-none text-muted'>{link.Name}</Link>:<span className='text-muted'>{link.Name}</span>}
+                                {link.External?(<a href={link.links}>{link.Name}</a>):
+                                (link.links?<Link to={link.links} className=' text-decoration-none text-muted'>{link.Name}</Link>:<span className='text-muted'>{link.Name}</span>)}
                             </li>
 
                         ))}

@@ -11,7 +11,7 @@ export default function LandingPage() {
     // const CardsMap=data.CardsMap;
     // const dynamics=data.dynamics;
     const { data,loading } = useData();
-    console.log(data);
+    // console.log(data);
     const { counterMap, CardsMap, dynamics } = data||{};
 //     const dynamics=[
 //     {

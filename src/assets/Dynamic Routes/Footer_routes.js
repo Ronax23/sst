@@ -66,20 +66,24 @@ export const Footer_route=[
     title: "Follow Us",
     links: [
         {
-            links: "facebook",
+            links: "https://www.facebook.com",
             Name: "Facebook"
+            ,External:true
         },
         {
-            links: "twitter",
+            links: "https://www.twitter.com",
             Name: "Twitter"
+            ,External:true
         },
         {
-            links: "linkedin",
+            links: "https://www.linkedin.com",
             Name: "LinkedIn"
+            ,External:true
         },
         {
-            links: "instagram",
+            links: "https://www.instagram.com",
             Name: "Instagram"
+            ,External:true
         }
     ]
    }
