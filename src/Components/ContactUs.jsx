@@ -23,7 +23,7 @@ function ContactUs() {
    <>   
    <HeaderReusable title="Contact Us" image={calling}/>
 
-      <section className="contact-section py-5">
+      <section className="contact-section">
         <div className="container">
           <div className="row justify-content-center">
              <div className="col-lg-5 col-12 rounded">
@@ -58,9 +58,9 @@ function ContactUs() {
              </div>
              </section>
 
-      <section className="map-section">
+      <section className="map-section  position-relative">
         <div className="container-fluid p-0 overflow-hidden">
-          <h1 className='text-center'>Locate Us</h1>
+          <h1 className='text-center position-absolute background-transparent w-100'>Locate Us</h1>
     <MapContainer center={location} zoom={20} className='mapstyle'>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

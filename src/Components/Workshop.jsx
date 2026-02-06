@@ -1,87 +1,120 @@
 import React ,{useState}from 'react'
 import { motion, AnimatePresence } from 'motion/react';
+import { useData } from '../context/Context.jsx'
+import LoaderError from '../assets/Reusable/LoaderError.jsx'
+import CardsSec from '../assets/Reusable/CardsSec.jsx';
 
 function Workshop() {
+
+
+  const CardDats=  
+  {
+    head:"Our Workshop Principles",
+    cards:[
+    {
+        icon:"bi bi-arrow-repeat",
+        title:"Reliability",
+        desc:"Consistent performance and structural integrity in every component"
+    },
+    {
+        icon:"bi bi-bullseye",
+        title:"Repeatability",
+        desc:"VMC precision ensuring identical tolerances from the 1st to 1000th part"
+    },
+    {
+        icon:"bi bi-recycle",
+        title:"Resourcefulness",
+        desc:"Optimizing material usage for cost-effective, high-quality engineering"
+    },
+    {
+        icon:"bi bi-input-cursor-text", 
+        title:"Planned Precision",
+        desc:"Following the 5P rule: Proper Planning Prevents Poor Performance"
+    }
+  ]
+  }
   const [selectedMachine, setSelectedMachine] = useState(null)
   const [modal, setModal] = useState(false)
   const [mover,setMover]=useState(3)
-  const machines=[
-    {
-      name:"Kafo VMC",
-      Model:"Kafo VMC B3122",
-      Description:"Kafo VMC B3122 is a vertical machining center that is used for machining various parts."
-      ,Image:"/Machines/vmc.jpg"
-    },
-    {
-      name:"NeWay CNC",
-      Model:"NeWay CNC Lathe",
-      Description:"NeWay CNC Lathe is a lathe that is used for machining various parts.",
-      Image:"/Machines/cnc.jpg"
-    },
-    {
-      name:"TOS Boring Machine",
-      Model:"TOS WH-100",
-      Description:"TOS Boring Machine is a boring machine that is used for boring various parts.",
-      Image:"/Machines/b100.jpg"
-    },
-    {
-      name:"TOS Boring Machine",
-      Model:"TOS WH-80",
-      Description:"TOS Milling Machine is a milling machine that is used for milling various parts.",
-      Image:"/Machines/b80.jpg"
-    },
-    {
-      name:"Lathe Machine",
-      Model:"Lathe 18 Foot",
-      Make:"Batala Punjab 2006",
-      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"/Machines/l18.jpg"
-    },
-    {
-      name:"Lathe Machine",
-      Model:"Lathe 12 Foot",
-      Make:"Batala Punjab 2006",
-      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"/Machines/l12.jpg"
-    },
-    {
-      name:"Lathe Machine",
-      Model:"Lathe 9 Foot",
-      Make:"Rajkot Gujarat 2016",
-      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"/Machines/l9.jpg"
-    },
-    {
-      name:"Lathe Machine",
-      Model:"Lathe 10 Foot",
-      Make:"Rajkot Gujarat 2017",
-      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"/Machines/l10.jpg"
-    },
-    {
-      name:"Lathe Machine",
-      Model:"Lathe 6 Foot",
-      Make:"Keloskar 1998",
-      Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
-      Image:"/Machines/l6.jpg"
-    },
-    {
-      name:"M1TR",
-      Model:"M1TR",
-      Make:"M1TR",
-      Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
-      Image:"/Machines/m1tr.jpg"
+  const {data,loading}=useData();
+ const { machines} = data||[];
+  // const machines=[
+  //   {
+  //     name:"Kafo VMC",
+  //     Model:"Kafo VMC B3122",
+  //     Description:"Kafo VMC B3122 is a vertical machining center that is used for machining various parts."
+  //     ,Image:"/Machines/vmc.jpg"
+  //   },
+  //   {
+  //     name:"NeWay CNC",
+  //     Model:"NeWay CNC Lathe",
+  //     Description:"NeWay CNC Lathe is a lathe that is used for machining various parts.",
+  //     Image:"/Machines/cnc.jpg"
+  //   },
+  //   {
+  //     name:"TOS Boring Machine",
+  //     Model:"TOS WH-100",
+  //     Description:"TOS Boring Machine is a boring machine that is used for boring various parts.",
+  //     Image:"/Machines/b100.jpg"
+  //   },
+  //   {
+  //     name:"TOS Boring Machine",
+  //     Model:"TOS WH-80",
+  //     Description:"TOS Milling Machine is a milling machine that is used for milling various parts.",
+  //     Image:"/Machines/b80.jpg"
+  //   },
+  //   {
+  //     name:"Lathe Machine",
+  //     Model:"Lathe 18 Foot",
+  //     Make:"Batala Punjab 2006",
+  //     Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+  //     Image:"/Machines/l18.jpg"
+  //   },
+  //   {
+  //     name:"Lathe Machine",
+  //     Model:"Lathe 12 Foot",
+  //     Make:"Batala Punjab 2006",
+  //     Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+  //     Image:"/Machines/l12.jpg"
+  //   },
+  //   {
+  //     name:"Lathe Machine",
+  //     Model:"Lathe 9 Foot",
+  //     Make:"Rajkot Gujarat 2016",
+  //     Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+  //     Image:"/Machines/l9.jpg"
+  //   },
+  //   {
+  //     name:"Lathe Machine",
+  //     Model:"Lathe 10 Foot",
+  //     Make:"Rajkot Gujarat 2017",
+  //     Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+  //     Image:"/Machines/l10.jpg"
+  //   },
+  //   {
+  //     name:"Lathe Machine",
+  //     Model:"Lathe 6 Foot",
+  //     Make:"Keloskar 1998",
+  //     Description:"Lathe Machine is a lathe machine that is used for lathe various parts.",
+  //     Image:"/Machines/l6.jpg"
+  //   },
+  //   {
+  //     name:"M1TR",
+  //     Model:"M1TR",
+  //     Make:"M1TR",
+  //     Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
+  //     Image:"/Machines/m1tr.jpg"
 
-    },
-    {
-      name:"Surface Grinder",
-      Model:"Guru Surface Grinder",
-      Make:"Faridabad 2015",
-      Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
-      Image:"/Machines/l6.jpg"
+  //   },
+  //   {
+  //     name:"Surface Grinder",
+  //     Model:"Guru Surface Grinder",
+  //     Make:"Faridabad 2015",
+  //     Description:"M1TR is a M1TR machine that is used for M1TR various parts.",
+  //     Image:"/Machines/l6.jpg"
 
-    }
-  ]
+  //   }
+  // ]
   const selectedMachineHandler=(index)=>{
     setSelectedMachine(index)
     setModal(true)
@@ -97,6 +130,9 @@ function Workshop() {
       if ((prev + step) > machines.length) return machines.length;
       return (prev + step);
     });
+  }
+if (loading || !data) {
+    return <LoaderError/>
   }
 
   return (
@@ -123,7 +159,7 @@ function Workshop() {
         <button className="btn btn-primary btn-lg">Explore Services</button>
       </div>
     </header>
-
+    <CardsSec dynamicdat={CardDats}/>
       <section id="sec6">
         <div className="container">
           <motion.div 
@@ -132,7 +168,7 @@ function Workshop() {
       transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}>
             <h2 className='text-center my-3'>Our Machines</h2>
             <AnimatePresence>
-            {machines.slice(0,mover).map((machine, index) => (
+            {machines && machines.slice(0,mover).map((machine, index) => (
               <motion.div initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -180,7 +216,7 @@ function Workshop() {
               </div>
               <div className="col-lg-5">
                 <h5>{selectedMachine?.name}</h5>
-                <p>{selectedMachine?.Model +" "&& +selectedMachine?.Make}</p>
+                <p>{selectedMachine?.Model? selectedMachine?.Model:selectedMachine?.Make }</p>
                 <p>{selectedMachine?.Make}</p>
                 <p>{selectedMachine?.Description}</p>
               </div>

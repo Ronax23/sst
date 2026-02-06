@@ -12,70 +12,70 @@ export default function LandingPage() {
     // const dynamics=data.dynamics;
     const { data,loading } = useData();
     console.log(data);
-    
-    const dynamics=[
-    {
-        content:"Expert Precision in Every Component",
-        p:"Specialized job-work for high-quality moulds, dies, and custom industrial parts tailored to your specifications",
-        imgsrc:"/Headers/Carousel1.jpg"     
-    },
-    {
-        content:"Hydro-Turbine Part Specialists",
-        p:"Delivering durable, high-performance components engineered to withstand the rigors of the power generation industry",
-        imgsrc:"/Headers/Carousel2.jpg"     
-    },
-    {
-        content:"Advanced Tooling, Proven Reliability",
-        p:"Combining years of workshop expertise with modern machining to ensure your projects are delivered on time and on spec",
-        imgsrc:"/Headers/Carousel3.jpg"     
-    }
-]
-    const counterMap=[
-        {
-            count:15,
-            title:"Years of Excellence"
-        },
-        {
-            count:500,
-            title:"Projects Delivered"
-        },
-        {
-            count:200,
-            title:"Precision Moulds"
-        },
-        {
-            count:120,
-            title:"Satisfied Clients"
-        }
-    ]
-    const CardsMap=[
-        {
-            icon:"bi bi-bullseye",
-            title:"Precision-First Approach",
-            desc:"Ensuring exact tolerances in every mould and die we craft"
-        },
-        {
-            icon:"bi-gear-wide-connected",
-            title:"Technical Mastery",
-            desc:"Deep expertise in the specialized manufacturing of hydro-turbine components"
-        },
-        {
-            icon:"bi-patch-check",
-            title:"Uncompromising Quality",
-            desc:"Rigorous testing protocols to guarantee durability in high-stress environments"
-        },
-        {
-            icon:"bi-clock-history",
-            title:"On-Time Execution",
-            desc:"Streamlined workshop management to meet your critical project deadlines"
-        }
-    ];
+    const { counterMap, CardsMap, dynamics } = data||{};
+//     const dynamics=[
+//     {
+//         content:"Expert Precision in Every Component",
+//         p:"Specialized job-work for high-quality moulds, dies, and custom industrial parts tailored to your specifications",
+//         imgsrc:"/Headers/Carousel1.jpg"     
+//     },
+//     {
+//         content:"Hydro-Turbine Part Specialists",
+//         p:"Delivering durable, high-performance components engineered to withstand the rigors of the power generation industry",
+//         imgsrc:"/Headers/Carousel2.jpg"     
+//     },
+//     {
+//         content:"Advanced Tooling, Proven Reliability",
+//         p:"Combining years of workshop expertise with modern machining to ensure your projects are delivered on time and on spec",
+//         imgsrc:"/Headers/Carousel3.jpg"     
+//     }
+// ]
+//     const counterMap=[
+//         {
+//             count:15,
+//             title:"Years of Excellence"
+//         },
+//         {
+//             count:500,
+//             title:"Projects Delivered"
+//         },
+//         {
+//             count:200,
+//             title:"Precision Moulds"
+//         },
+//         {
+//             count:120,
+//             title:"Satisfied Clients"
+//         }
+//     ]
+//     const CardsMap=[
+//         {
+//             icon:"bi bi-bullseye",
+//             title:"Precision-First Approach",
+//             desc:"Ensuring exact tolerances in every mould and die we craft"
+//         },
+//         {
+//             icon:"bi-gear-wide-connected",
+//             title:"Technical Mastery",
+//             desc:"Deep expertise in the specialized manufacturing of hydro-turbine components"
+//         },
+//         {
+//             icon:"bi-patch-check",
+//             title:"Uncompromising Quality",
+//             desc:"Rigorous testing protocols to guarantee durability in high-stress environments"
+//         },
+//         {
+//             icon:"bi-clock-history",
+//             title:"On-Time Execution",
+//             desc:"Streamlined workshop management to meet your critical project deadlines"
+//         }
+//     ];
   
 
 
     const ref = useRef();
     const [adder, setAdder] = useState(0);
-const maxCount = Math.max(...counterMap.map(item => item.count));
+const maxCount = Math.max(...counterMap?.map(item => item.count) || []);
 useEffect(() => {
     let interval = null;
     
@@ -98,11 +98,11 @@ useEffect(() => {
         if (interval) clearInterval(interval);
         observer.disconnect();
     };
-}, []); // Runs once when page opens
+}, [data]); // Runs once when page opens
 
-// if (loading || !data) {
-//     return <LoaderError/>
-//   }
+if (loading || !data) {
+    return <LoaderError/>
+  }
   return (
     <>
     <header id='main'>
@@ -128,10 +128,10 @@ useEffect(() => {
     </header>
    <BrandSection/>
     
-    <section id="sec3">
+    <section id="sec3" className='my-5'>
     <div className="container">
         <div className="row">
-            <h1 className='text-center my-3'>Our Vision</h1>
+            <h1 className='text-center my-4'>Our Vision</h1>
             <div className="col-lg-6  my-2">
                 <div className="img1 overflow-hidden position-relative">
                 <img  src="/Components/mould.jpg" alt="Our Vision" className="img-fluid" />

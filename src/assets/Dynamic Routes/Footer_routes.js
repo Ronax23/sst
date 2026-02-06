@@ -48,8 +48,8 @@ export const Footer_route=[
                 Name: "Our Team"
             },
     {
-        links: "support",
-        Name: "Support"
+        links: "*",
+        Name: "Error 404"
     },
         {
         links: "services",

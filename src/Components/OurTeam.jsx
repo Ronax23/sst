@@ -3,10 +3,34 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import HeaderReusable from '../assets/Reusable/HeaderReusable'
 import LazyImage from '../assets/Reusable/LazyImage'
+import { icon } from 'leaflet'
+import CardsSec from '../assets/Reusable/CardsSec'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function OurTeam() {
+    const cardDat=
+    {
+        head:"Our Team Principles",
+        cards:[
+        {
+            icon:"bi bi-people-fill",
+            title:"Collaborative Synergy",
+            desc:"Unified teams bridging the gap between blueprints and finished components."        },
+        {
+            icon:"bi bi-mortarboard-fill",
+            title:"Technical Mastery",
+            desc:"Expert engineers specializing in CNC/VMC operations in the Faridabad hub."        },
+        {
+            icon:"bi bi-search",
+            title:"Precision Mindset",
+            desc:"Trained in \"Zero-Defect\" manufacturing for micron-level job work accuracy."        },
+        {
+            icon:"bi bi-award-fill",
+            title:"Certified Expertise",
+            desc:"Specialized technicians maintaining our elite ISO and MSME standards."        }
+    ]
+}
     const team = [
         { name: "John Doe", role: "Project Manager", photo: "https://randomuser.me/api/portraits/men/1.jpg" },
         { name: "Jane Smith", role: "Lead Developer", photo: "https://randomuser.me/api/portraits/women/2.jpg" },
@@ -50,7 +74,7 @@ function OurTeam() {
     return (
         <div>
             <HeaderReusable title="Our Team" image="/Headers/overview.jpg" />
-            
+            <CardsSec dynamicdat={cardDat}/>
             <section ref={sectionRef} id="OurTeam">
                 <div className="container-fluid sticky-box overflow-hidden">
                     <div ref={trackRef} className="horizontal-scroll-track d-flex flex-nowrap">

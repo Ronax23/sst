@@ -26,7 +26,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<LandingPage />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="team" element={<OurTeam />} />
-          <Route path="terms-of-service" element={<Terms />} />
+          <Route path="terms-of-service" element={<Terms term={true} />} />
+          <Route path="privacy-policy" element={<Terms term={false} />} />
           <Route path="workshop" element={<Workshop />} />
           <Route path="services" element={<Services />} />
         </Route>

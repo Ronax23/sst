@@ -302,7 +302,6 @@ img{
   background-color: #dc3545 !important; /* Change to your brand color */
   color: white !important;
   border-color: #dc3545 !important;
-  z-index: 2; /* Ensures it stays on top of borders */
 }
 /* Animation Keyframes */
 @keyframes fadeInUp {
@@ -509,7 +508,7 @@ footer
 .contact-section
 {
   color: white;
-  padding: 50px 0;
+  padding: 80px 0;
   background-image: linear-gradient(to right,rgba(231, 217, 232, 0.8),rgba(26, 27, 25, 0.8)),url(/Backgrounds/contact.jpg);
 }
 .mapstyle
@@ -540,4 +539,10 @@ footer
   .modal-dialog{
     max-width: 100% !important;
 }
+}
+.map-section h1
+{
+  z-index: 9;
+  top: -70px;
+  color: white;
 }
