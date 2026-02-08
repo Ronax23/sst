@@ -16,7 +16,7 @@ function HeaderReusable(props) {
                     <div aria-label="breadcrumb ">
   <ol className="breadcrumb text-white justify-content-center">
     <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-    <li className="breadcrumb-item active text-white" aria-current="page">{(id.pathname.split('/').pop()).toUpperCase()}</li>
+    <li className="breadcrumb-item active text-white" aria-current="page">{(id.pathname.split('/').pop().replace(/-/g, " ")).toUpperCase()}</li>
   </ol>
 </div>
                 </div>
